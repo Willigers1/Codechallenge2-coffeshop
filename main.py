@@ -1,6 +1,6 @@
 class CoffeeShop:
     def __init__(self):
-        # Initialize the menu with coffee types and their respective prices
+       
         self.menu = {
             "tea": 2.5,
             "cappuccino": 2.0,
@@ -8,7 +8,7 @@ class CoffeeShop:
             "latte": 3.0,
             "cold brew": 4.0,
         }
-        # Initialize the inventory with the quantity of each coffee type available
+    
         self.inventory = {
             "tea": 10,
             "cappuccino": 10,
@@ -16,12 +16,12 @@ class CoffeeShop:
             "latte": 10,
             "cold brew": 10
         }
-        # Initialize sales to keep track of total sales made
+       
         self.sales = 0.0
-        # Placeholder for customer's name (will be asked in the main function)
+       
         self.customer_name = ""
 
-    # Method to display the menu to the customer
+   
     def display_menu(self):
         print("\n---- Menu ----")
         # Loop through the menu items and display them with prices
@@ -29,14 +29,14 @@ class CoffeeShop:
             print(f"{item.capitalize()} : ${price:.2f}")
         print("------------------\n")
 
-    # Method to handle the process of taking an order from the customer
+    # How the customers order will be taken 
     def take_order(self):
         # Display the menu before asking for an order
         self.display_menu()
         # Ask the customer what they want to order
         order = input(f"{self.customer_name}, what would you like to order? ").lower()
 
-        # Check if the ordered item is on the menu
+        # Checking if the order placed is in the menu 
         if order in self.menu:
             # Check if the ordered item is available in inventory
             if self.inventory[order] > 0:
